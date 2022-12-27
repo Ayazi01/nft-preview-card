@@ -1,0 +1,32 @@
+dateModified: 1672174922
+email:
+  fromEmail: marwanewahbi@gmaiil.com
+  fromName: 'craft nft'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    2cff92ce-589f-424e-8c69-2757606f0178: uploads # uploads
+    4a944a22-bb05-4325-9523-bf9d2fd751db: 'nft Author Fullname' # nft Author Fullname
+    53f9f1a9-e3c3-4a0f-bb4c-9eed103dbd39: Common # Common
+    68f0c264-7e44-4f5d-a050-8f82f7ac51a6: 'nft image' # nft image
+    189aa35c-a4e8-4fcb-9463-dbafe5c9c627: 'nft description' # nft description
+    01997b0d-4981-4b0a-967d-47197fa40e41: 'nft preview card' # nft preview card
+    67395f63-3c38-4474-b590-931e0151e017: 'nft price' # nft price
+    b198968d-288c-46b7-b477-1f9411d9968f: 'craft nft' # craft nft
+    c485e97a-b35a-4219-b63b-4e3b818d00b0: 'nft countdown' # nft countdown
+    d2b65ade-8671-4775-b335-d9234e3c103c: 'nft author photo' # nft author photo
+    e5fb8690-b935-474f-a733-e4a4d40e09a6: 'craft nft' # craft nft
+    f8bba200-598e-467c-a11c-83ee9452b560: 'nft preview card' # nft preview card
+    fefbc35a-74f1-40d8-811d-cf63c7a252da: 'nft title' # nft title
+system:
+  edition: solo
+  live: true
+  name: 'craft nft'
+  schemaVersion: 3.7.33
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

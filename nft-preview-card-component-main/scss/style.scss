@@ -1,0 +1,236 @@
+@import 'config';
+// @function set-text-color($color){
+//     @if(lightness($color) > 70){
+//         @return #333;
+//     } @else {
+//         @return #fff
+//     }
+// }
+
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ## Colors
+
+// ### Primary
+
+// - Soft blue: hsl(215, 51%, 70%)
+// - Cyan: hsl(178, 100%, 50%)
+
+// ### Neutral
+
+// - Very dark blue (main BG): hsl(217, 54%, 11%)
+// - Very dark blue (card BG): hsl(216, 50%, 16%)
+// - Very dark blue (line): hsl(215, 32%, 27%)
+// - White: hsl(0, 0%, 100%)
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size (paragraph): 18px
+
+// ### Font
+
+// - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+// - Weights: 300, 400, 600
+
+// @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap');
+
+// $font-stack:'Outfit', sans-serif;
+
+//  $primary-color: hsl(215, 51%, 70%);
+//  $secondary-color:hsl(178, 100%, 50%);
+
+//  $font-size: 18px;
+
+//  $neutral-colors: (
+//      "main-bg": hsl(217, 54%, 11%),
+//      "card-bg": hsl(216, 50%, 16%),
+//      "line": hsl(215, 32%, 27%),
+//      "white": hsl(0, 0%, 100%)
+//  );
+
+//  $widths:(
+//      "mobile": 375px,
+//      "desktop": 1440px
+//  );
+
+
+
+// $font-weights: (
+//     "regular": 300,
+//     'medium': 400,
+//     'bold': 600
+// );
+
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  };
+
+  body {
+      background: map-get($map: $neutral-colors, $key: "main-bg" );
+      font-family: $font-stack;
+      color: white;
+     
+      
+    }
+
+.main {
+ 
+    // border: green 5px dotted ;
+   @include flexCenter;
+
+
+};
+.nft-card{
+   
+    width: map-get($map: $widths-nftCard, $key: 'desktop' );
+    height: auto;
+display: flex;
+flex-direction: column;
+background: map-get($map: $neutral-colors, $key: "card-bg" );
+border-radius: 2.5%;
+margin-top: 10%;
+box-shadow: 3px 19px 28px 16px rgba(0,0,0,0.50);
+// min-width: 500px;
+};
+.nft-img-link{
+    display: flex;
+    justify-content: center;
+    margin: 5% 5% ;
+    // border: yellow 5px dotted ;
+  
+    
+    
+}
+.nft-img {
+    // border: blue 5px dotted ;
+
+    width: 100%;
+    object-fit:contain;
+    border-radius: 2.5%;
+   
+   
+    
+} ;
+.nft-info{
+    display: flexbox;
+    align-content: flex-start;
+    margin: 0% 5%;
+    // border: green dotted 5px;
+
+    h2  {
+            a {
+            font-weight: map-get($map: $font-weights, $key: 'medium' );
+            text-decoration: none;
+            color: map-get($map: $neutral-colors, $key: 'white' );
+            font-family: $font-stack;
+            }
+            a:hover{
+                color: $secondary-color
+            } 
+        margin-bottom: 10px;
+}   
+    .nft-card-text {
+        color: $primary-color;
+        line-height:150%;
+    }
+    div {
+        margin: 5% 0%;
+    }
+   
+
+   
+    .nft-creator{
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        p   {
+            color:$primary-color;
+            a   {
+            text-decoration: none;
+            color: map-get($map: $neutral-colors, $key: 'white' );
+            font-size: 18px
+                }
+               
+            }
+        img {
+            width: 8%;
+            border: 1px white solid;
+            border-radius: 50%;
+            margin-right: 10px;
+            }
+        a:hover{
+                color: $secondary-color
+            } 
+    }
+    
+    
+}
+.nft-details{
+//    border: white dotted 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .eth{
+        color: $secondary-color;
+        font-weight: map-get($map: $font-weights, $key: 'medium');
+    }
+}
+
+@media(max-width: 375px) {
+    .nft-card{
+        width: map-get($map: $widths-nftCard, $key: 'mobile' );
+        height: auto
+    }
+  }
+
+//   @media(max-width: 1440px) {
+//     .nft-card{
+//         width: map-get($map: $widths-nftCard, $key: 'desktop' );
+//         height: auto
+//     }
+//   }
+
+@media (min-width: 375px) and (max-width: 1440px){
+    .nft-card{
+        width:50%
+    }
+};
+
+.div-icon-view{
+    display: none;
+    position: absolute;
+    top: 10%;
+    background: $secondary-color;
+    
+        width: 45%;
+        height: 45%;
+        
+    
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition-property: display;
+  transition-duration: 4s;
+  transition-delay: 2s;
+   
+    
+}
+.nft-img-link:hover .div-icon-view {
+   display: flex;
+    position: absolute;
+    
+  }

@@ -1,0 +1,19 @@
+columnSuffix: otwozhhy
+contentColumnType: text
+fieldGroup: 53f9f1a9-e3c3-4a0f-bb4c-9eed103dbd39 # Common
+handle: nftAuthorFullname
+instructions: ''
+name: 'nft Author Fullname'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

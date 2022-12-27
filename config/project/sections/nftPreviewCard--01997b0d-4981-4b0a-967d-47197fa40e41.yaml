@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: nftPreviewCard
+name: 'nft preview card'
+propagationMethod: all
+siteSettings:
+  b198968d-288c-46b7-b477-1f9411d9968f: # craft nft
+    enabledByDefault: true
+    hasUrls: true
+    template: nft-preview-card/_entry
+    uriFormat: nft-preview-card
+type: single

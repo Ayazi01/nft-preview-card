@@ -1,0 +1,19 @@
+columnSuffix: gunqxfvb
+contentColumnType: text
+fieldGroup: 53f9f1a9-e3c3-4a0f-bb4c-9eed103dbd39 # Common
+handle: nftCountdown
+instructions: ''
+name: 'nft countdown'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

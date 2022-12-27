@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 53f9f1a9-e3c3-4a0f-bb4c-9eed103dbd39 # Common
+handle: nftImage
+instructions: ''
+name: 'nft image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:2cff92ce-589f-424e-8c69-2757606f0178' # uploads
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'nft image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:2cff92ce-589f-424e-8c69-2757606f0178' # uploads
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:2cff92ce-589f-424e-8c69-2757606f0178' # uploads
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

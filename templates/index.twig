@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../nft-preview-card-component-main/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <link rel="stylesheet" href="../nft-preview-card-component-main/css/style.css">
+</head>
+<body>
+
+ {% set myEntryQuery = craft.entries()
+      .section('nftPreviewCard') %}
+
+{# Fetch the entries #}
+{% set entries = myEntryQuery.all() %}
+
+{% for entry in entries %} 
+{% set nftImage = entry.nftImage.one()%}
+  <main class="main">
+    <div class="nft-card">
+      <a class="nft-img-link" href="#">
+      
+        <img class="nft-img" class src={{nftImage.url}} alt="Equilibrium image" />
+        <div class="div-icon-view">
+          <img class="icon-view" src="../nft-preview-card-component-main/images/icon-view.svg" alt="icon view" />
+      </div>
+      </a>
+        
+      <div class="nft-info">
+      
+        <h2 class="nft-title"><a href="#">{{entry.nftTitle}}</a></h2>
+        <p class="nft-card-text">
+          {{entry.nftDescription}}
+          
+        </p>
+        <div class="nft-details">
+          <div class="eth">
+            <img src="../nft-preview-card-component-main/images/icon-ethereum.svg" alt="icon ethereum" />
+            <span>{{entry.nftPrice}}</span>
+          </div>
+          <p class="time-left">
+            <img src="../nft-preview-card-component-main/images/icon-clock.svg" alt="icon of clock" />
+            <span>{{ entry.nftCountdown}}</span>
+          </p>
+        </div>
+        <div class="nft-creator">
+        {% set nftAuthorImage = entry.nftAuthorPhoto.one()%}
+          <img src={{nftAuthorImage.url}} alt="nft creator image" />
+          <p>Creation of <a href="#">{{entry.nftAuthorFullname}}</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endfor %}
+</body>
+
+</html>
